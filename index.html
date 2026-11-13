@@ -6,8 +6,8 @@
     <title>Smart Stream TV</title>
     <link rel="stylesheet" href="css/output.css">
 </head>
-<body>
-    <header class="bg-[#0B1530] text-white p-4 justify-between items-center shadow-md border-b border-[#2F6FED]/30">
+<body >
+    <header class="bg-[#0B1530] text-white p-4 flex justify-between items-center shadow-md border-b border-[#2F6FED]/30">
 
         <div class="flex items-center gap-3">
             <img src="smart-stream-logo.svg" alt="Logo de Smart Stream" class="h-10 w-auto">
@@ -20,7 +20,82 @@
             <span>v1.0</span>
         </div>
     </header>
-    <main></main>
-    <footer></footer>
+
+    <main class="flex flex-col md:flex-row h-[calc(100vh-80px)]">
+
+        <aside class="w-full md:w-80 bg-[#0B1530]/50 border-t md:border-t-0 md:border-r border-[#2F6FED]/30 order-2 md:order-1 flex flex-col h-full">
+
+            <div class="p-4 border-b border-[#2F6FED]/30">
+                <h2 class="text-white font-bold text-lg uppercase tracking-wider">Liste des chaînes</h2>
+            </div>
+
+            <div class="p-3 border-b border-[#2F6FED]/30">
+
+                <div class="relative">
+
+                    <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                        <svg class="h-4 w-4 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                        </svg>
+                    </div>
+
+                    <input type="text" id="search-input" placeholder="Rechercher une chaîne..." class="w-full bg-[#0B1530] text-white text-sm rounded-lg pl-10 pr-4 py-2 border border-[#2F6FED]/30 focus:outline-none focus:border-[#2F6FED] focus:ring-1 focus:ring-[#2F6FED] placeholder-gray-500">
+
+                </div>
+            </div>
+
+            <div class="flex-1 overflow-y-auto p-2 space-y-2">
+
+                <div class="flex items-center gap-3 p-3 rounded-lg cursor-pointer transition-colors hover:bg-[#2F6FED]/20 bg-[#2F6FED]/40 border border-[#2F6FED]">
+                    <span class="text-[#FCC62D] font-mono text-sm font-bold">1057</span>
+                    <img src="https://via.placeholder.com/60x60?text=Discovery" alt="Discovery" class="w-10 h-10 rounded bg-white p-1 object-contain">
+                    <div class="flex flex-col">
+                        <span class="text-white font-medium text-sm">FR - DISCOVERY ID FHD</span>
+                        <span class="text-gray-400 text-xs">DOCUMENTAIRE</span>
+                    </div>
+                </div>
+
+                <div class="flex items-center gap-3 p-3 rounded-lg cursor-pointer transition-colors hover:bg-[#2F6FED]/20">
+                    <span class="text-[#FCC62D] font-mono text-sm font-bold">1058</span>
+                    <img src="https://via.placeholder.com/60x60?text=TLC" alt="TLC" class="w-10 h-10 rounded bg-white p-1 object-contain">
+                    <div class="flex flex-col">
+                        <span class="text-white font-medium text-sm">FR - TLC FHD</span>
+                        <span class="text-gray-400 text-xs">DOCUMENTAIRE</span>
+                    </div>
+                </div>
+
+            </div>
+        </aside>
+
+        <section class="flex-1 p-4 md:p-8 order-1 md:order-2 overflow-y-auto">
+
+            <div class="relative w-full aspect-video bg-black rounded-lg overflow-hidden shadow-lg border border-[#2F6FED]/30">
+
+                <img src="https://via.placeholder.com/800x450?text=Discovery+Show" alt="Prévisualisation" class="w-full h-full object-cover">
+
+                <div class="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-t from-black/80 to-transparent">
+
+                    <h2 class="text-white text-2xl font-bold">FR - Discovery ID FHD</h2>
+
+                    <p class="text-[#2F6FED] font-semibold text-sm">Documentaire</p>
+                </div>
+            </div>
+
+            <div class="mt-4 text-white">
+
+                <h3 class="text-lg font-semibold border-b border-[#2F6FED]/50 pb-2 mb-2">En cours de diffusion</h3>
+
+                <p class="text-gray-400 text-sm">Bienvenue sur le lecteur principal. Sélectionnez une chaîne à gauche pour commencer la lecture.</p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer class="bg-[#0B1530] text-center p-2 text-xs text-gray-500 border-t border-[#2F6FED]/30">
+        &copy; 2026 Smart Stream TV - Tous droits réservés
+    </footer>
+
 </body>
 </html>
