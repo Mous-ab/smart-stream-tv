@@ -1,0 +1,1 @@
+import { channelsData } from "../data/data";
