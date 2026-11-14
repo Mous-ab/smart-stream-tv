@@ -1,9 +1,9 @@
 export function createChannelElement(channel) {
     const div = document.createElement('div');
 
-    div.className = "flex items-center gap-3 p-3 rounded-lg cursor-pointer transition-colors hover:bg-[#2F6FED]/200";
+    div.className = "flex items-center gap-3 p-3 rounded-lg cursor-pointer transition-colors hover:bg-[#2F6FED]/20";
 
-    div.setAttribute('data-if', channel.id);
+    div.setAttribute('data-id', channel.id);
 
     div.innerHTML = `
         <span class="text-[#FCC62D] font-mono text-sm font-bold">${channel.channelNumber}
@@ -24,7 +24,7 @@ export function renderChannelList(channels, containerId) {
     const container = document.getElementById(containerId);
     container.innerHTML = "";
 
-    channels.forEach(channels => {
+    channels.forEach(channel => {
         const channelElement = createChannelElement(channel);
         container.appendChild(channelElement);
     });
