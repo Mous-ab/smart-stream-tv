@@ -1,3 +1,6 @@
 import { channelsData } from "../data/data.js";
+import { renderChannelList } from "../js/ui.js";
 
-console.log(channelsData);
+document.addEventListener('DOMContentLoaded', () => {
+    renderChannelList(channelsData, 'channel-list');
+});
