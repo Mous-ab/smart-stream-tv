@@ -44,25 +44,7 @@
                     </div>
                 </div>
 
-                <div class="flex-1 overflow-y-auto p-2 space-y-2">
-
-                    <div class="flex items-center gap-3 p-3 rounded-lg cursor-pointer transition-colors hover:bg-[#2F6FED]/20 bg-[#2F6FED]/40 border border-[#2F6FED]">
-                        <span class="text-[#FCC62D] font-mono text-sm font-bold">1057</span>
-                        <img src="https://via.placeholder.com/60x60?text=Discovery" alt="Discovery" class="w-10 h-10 rounded bg-white p-1 object-contain">
-                        <div class="flex flex-col">
-                            <span class="text-white font-medium text-sm">FR - DISCOVERY ID FHD</span>
-                            <span class="text-gray-400 text-xs">DOCUMENTAIRE</span>
-                        </div>
-                    </div>
-
-                    <div class="flex items-center gap-3 p-3 rounded-lg cursor-pointer transition-colors hover:bg-[#2F6FED]/20">
-                        <span class="text-[#FCC62D] font-mono text-sm font-bold">1058</span>
-                        <img src="https://via.placeholder.com/60x60?text=TLC" alt="TLC" class="w-10 h-10 rounded bg-white p-1 object-contain">
-                        <div class="flex flex-col">
-                            <span class="text-white font-medium text-sm">FR - TLC FHD</span>
-                            <span class="text-gray-400 text-xs">DOCUMENTAIRE</span>
-                        </div>
-                    </div>
+                <div id="channel-list" class="flex-1 overflow-y-auto p-2 space-y-2">
 
                 </div>
             </aside>
@@ -71,13 +53,13 @@
 
                 <div class="relative w-full aspect-video bg-black rounded-lg overflow-hidden shadow-lg border border-[#2F6FED]/30">
 
-                    <img src="https://via.placeholder.com/800x450?text=Discovery+Show" alt="Prévisualisation" class="w-full h-full object-cover">
+                    <img id="preview-image" src="https://via.placeholder.com/800x450?text=Discovery+Show" alt="Prévisualisation" class="w-full h-full object-cover">
 
                     <div class="absolute bottom-0 left-0 w-full p-4 bg-linear-to-t from-black/80 to-transparent">
 
-                        <h2 class="text-white text-2xl font-bold">FR - Discovery ID FHD</h2>
+                        <h2 id="preview-title" class="text-white text-2xl font-bold">FR - Discovery ID FHD</h2>
 
-                        <p class="text-[#2F6FED] font-semibold text-sm">Documentaire</p>
+                        <p id="preview-category" class="text-[#2F6FED] font-semibold text-sm">Documentaire</p>
                     </div>
                 </div>
 
