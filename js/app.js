@@ -1,1 +1,3 @@
-import { channelsData } from "../data/data";
+import { channelsData } from "../data/data.js";
+
+console.log(channelsData);
