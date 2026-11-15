@@ -4,17 +4,26 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Smart Stream TV</title>
+        <link rel="icon" type="image/png" href="/smart-stream-logo.svg">
         <link rel="stylesheet" href="css/output.css">
     </head>
     <body class="bg-[#0B1530] md:h-screen md:flex md:flex-col md:overflow-hidden">
         <header class="bg-[#0B1530] text-white p-4 flex justify-between items-center shadow-md border-b border-[#2F6FED]/30 sticky top-0 z-50">
 
-            <div class="flex items-center gap-3">
+            <div class="flex items-center gap-2 sm:gap-3">
                 <img src="smart-stream-logo.svg" alt="Logo de Smart Stream" class="h-10 w-auto">
-                <h1 class="text-xl font-bold tracking-wide">
+                <h1 class="text-base sm:text-xl font-bold tracking-wide">
                     Smart Stream <span class="text-[#FCC62D]">TV</span>
                 </h1>
             </div>
+
+            <nav>
+                <ul class="flex items-center gap-3 sm:gap-6 text-xs sm:text-sm text-gray-300">
+                    <li><a href="#" class="hover:text-[#FCC62D] transition-colors">Accueil</a></li>
+                    <li><a href="#channel-list" class="hover:text-[#FCC62D] transition-colors">Chaînes</a></li>
+                    <li class="hidden sm:block"><a href="#" class="hover:text-[#FCC62D] transition-colors">À propos</a></li>
+                </ul>
+            </nav>
 
             <div class="text-sm text-gray-400">
                 <span>v1.0</span>
@@ -53,21 +62,44 @@
 
                 <div class="relative w-full aspect-video bg-black rounded-lg overflow-hidden shadow-lg border border-[#2F6FED]/30">
 
-                    <img id="preview-image" src="https://via.placeholder.com/800x450?text=Discovery+Show" alt="Prévisualisation" class="w-full h-full object-cover">
+                    <img id="preview-image" alt="Prévisualisation de la chaîne" class="w-full h-full object-cover">
 
                     <div class="absolute bottom-0 left-0 w-full p-4 bg-linear-to-t from-black/80 to-transparent">
 
-                        <h2 id="preview-title" class="text-white text-2xl font-bold">FR - Discovery ID FHD</h2>
+                        <h2 id="preview-title" class="text-white text-2xl font-bold"></h2>
 
-                        <p id="preview-category" class="text-[#2F6FED] font-semibold text-sm">Documentaire</p>
+                        <p id="preview-category" class="text-[#FCC62D] font-semibold text-sm"></p>
                     </div>
                 </div>
 
-                <div class="mt-4 text-white">
+                <!-- <div class="mt-4 text-white">
 
                     <h3 class="text-lg font-semibold border-b border-[#2F6FED]/50 pb-2 mb-2">En cours de diffusion</h3>
 
-                    <p class="text-gray-400 text-sm">Bienvenue sur le lecteur principal. Sélectionnez une chaîne à gauche pour commencer la lecture.</p>
+                    <p class="text-gray-400 text-sm">Choisissez une chaîne dans la liste pour changer de programme.</p>
+
+                </div> -->
+
+                                <div class="mt-4 text-white">
+
+                    <h3 class="text-lg font-semibold border-b border-[#2F6FED]/50 pb-2 mb-2">En cours de diffusion</h3>
+
+                    <!-- Conteneur des infos du programme -->
+                    <div id="program-info" class="bg-[#0B1530]/30 p-4 rounded-lg border border-[#2F6FED]/20">
+                        <div class="flex justify-between items-center mb-2">
+                            <span id="program-title" class="text-[#FCC62D] font-bold text-lg">Chargement...</span>
+                            <span id="program-time" class="text-gray-400 text-sm">--:-- - --:--</span>
+                        </div>
+                        
+                        <!-- Barre de progression -->
+                        <div class="w-full bg-gray-700 rounded-full h-2.5">
+                            <div id="program-progress" class="bg-[#F04438] h-2.5 rounded-full" style="width: 0%"></div>
+                        </div>
+                        
+                        <p class="text-gray-400 text-xs mt-3">
+                            <span class="text-gray-300 font-medium">Smart Stream TV</span> - Profitez de votre programme en direct.
+                        </p>
+                    </div>
 
                 </div>
 
@@ -79,6 +111,7 @@
             &copy; 2026 Smart Stream TV - Tous droits réservés
         </footer>
 
+        <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
         <script type="module" src="js/app.js"></script>
     </body>
 </html>
